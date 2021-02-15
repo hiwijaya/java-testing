@@ -16,5 +16,17 @@ public class CalculatorTest {
         assertEquals(15, result);
     }
 
+    @Test
+    public void testDivideSuccess(){
+        var result = calculator.divide(10, 2);
+        assertEquals(5, result);
+    }
+
+    @Test
+    public void testDivideFailed(){
+        assertThrows(IllegalArgumentException.class, () -> {
+            calculator.divide(10, 0);
+        });
+    }
 
 }
