@@ -5,10 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 import org.junit.jupiter.api.condition.OS;
 import org.opentest4j.TestAbortedException;
-
 import java.util.Properties;
-
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
+import static org.junit.jupiter.api.Assumptions.*;
 
 /**
  * @author Happy Indra Wijaya
@@ -32,6 +30,8 @@ public class ConditionalTest {
     @Test
     public void testAssumptions(){
         assumeTrue("DEV".equals(System.getenv("PROFILE")));
+
+        // test here
     }
 
     @Test
